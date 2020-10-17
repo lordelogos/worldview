@@ -53,7 +53,7 @@ class Card {
 					<br>
 					<li>Top Level Domain: ${this.topdom}</li>
 					<li>Currency: ${this.currency}, ${this.currencyName}</li>
-					<li>Timezone: ${this.time}</li>
+					<li>Timezone(s): ${this.time}</li>
 				</ul>
 			</div>
 			<div class="back-btn">
