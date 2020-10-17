@@ -1,3 +1,4 @@
+
 var docs;
 class Card {
 	constructor(obj){
@@ -108,6 +109,7 @@ if (arr == ''|| arr == null){
 				localStorage.setItem('results', JSON.stringify(arr));
 				pagestotal = arr.length;
 				docs = arr;
+				document.getElementById("loader").style.display = "none";
 				populate(docs, pagenum);
 			}
 		}
@@ -116,6 +118,7 @@ if (arr == ''|| arr == null){
 	})()
 }else {
 	docs = arr;
+	document.getElementById("loader").style.display = "none";
 	populate(docs, pagenum);
 }
 
@@ -252,11 +255,14 @@ country.addEventListener('keyup', function(e){
 		var searchitem = country.value;
 		console.log(searchitem);
 		var xhr = new XMLHttpRequest();
+		body.innerHTML= '';
+		document.getElementById("loader").style.display = "block";
 		xhr.open('GET', `https://restcountries.eu/rest/v2/name/${searchitem}`, true);
 		xhr.onload = function(){
 				if(this.status == 200){
 					var arr = JSON.parse(this.responseText);
 					country.value = '';
+					document.getElementById("loader").style.display = "none";
 					searchres(arr);
 				}
 			}
