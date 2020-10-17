@@ -205,30 +205,26 @@ input:checked + .slider {
 
 .resultPage{
   margin: auto;
-  width: 60%;
+  width: 70%;
   margin-bottom: 5vh;
   color: white;
 }
 
 @media screen and(max-width: 768px){
   .resultPage{
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media screen and(max-width: 600px){
   .resultPage{
     width: 100%;
-  }
-
-  .flagpage{
-    height: 30vh;
-  }
+}
 }
 
 .flagpage{
   width: 100%;
-  height: 40vh;
+  height: 20vh;
   background-color: red;
   margin-bottom: 8vh;
 }

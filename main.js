@@ -178,7 +178,6 @@ function loadpg(){
 				if(this.status == 200){
 					var arr = JSON.parse(this.responseText);
 					var pg = new Card(arr[0]);
-					console.log(arr)
 					document.querySelector('#pagination').style.visibility = 'hidden';
 					prev.style.visibility = 'hidden';
 					next.style.visibility = 'hidden';
@@ -227,6 +226,7 @@ filter.addEventListener('change', function(){
 					total.textContent = pagestotal;
 					docs = arr;
 					prev.style.visibility = 'hidden';
+					next.style.visibility = 'visible';
 					populate(docs, pagenum);
 				}
 			}
@@ -244,6 +244,7 @@ filter.addEventListener('change', function(){
 			total.textContent = pagestotal;
 			docs = regex;
 			prev.style.visibility = 'hidden';
+			next.style.visibility = 'visible';
 			populate(docs, pagenum)
 		}
 })
