@@ -105,6 +105,7 @@ input:checked + .slider {   /* change this */
 }
 
 #filter select{
+  background-color: white;
   width: 200px;
 }
 
